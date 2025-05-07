@@ -1,21 +1,43 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Web, Desktop.
+# 🧼 Cleaner App – Cleaning Business Platform
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+This is the **Cleaner App** for the multi-platform cleaning business solution. It's built with **JetBrains Compose Multiplatform** to run on **Android, iOS, Desktop, and Web**, and connects to a **FastAPI backend** for authentication, job management, and scheduling.
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+---
 
+## 📱 App Overview
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html),
-[Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform/#compose-multiplatform),
-[Kotlin/Wasm](https://kotl.in/wasm/)…
+The Cleaner App is used by cleaning staff to:
 
-We would appreciate your feedback on Compose/Web and Kotlin/Wasm in the public Slack channel [#compose-web](https://slack-chats.kotlinlang.org/c/compose-web).
-If you face any issues, please report them on [GitHub](https://github.com/JetBrains/compose-multiplatform/issues).
+- View upcoming jobs
+- Mark jobs as completed
+- Update their availability
+- Receive real-time updates and notifications
 
-You can open the web application by running the `:composeApp:wasmJsBrowserDevelopmentRun` Gradle task.
+---
+
+## 🧰 Tech Stack
+
+| Layer      | Tech                          |
+|------------|-------------------------------|
+| UI         | JetBrains Compose Multiplatform |
+| Networking | Ktor Client                   |
+| State      | Kotlinx Coroutines, Flow      |
+| Storage    | Encrypted Shared Preferences (Android), SecureStorage (iOS) |
+| Backend    | FastAPI                       |
+| Auth       | JWT                           |
+
+---
+
+## 🚀 Features
+
+- 🔐 Secure login and token-based authentication
+- 📆 View assigned bookings with details
+- ✅ Mark jobs as "in progress" or "complete"
+- 🕒 Update personal availability
+- 🔔 Push notification integration (optional/future)
+- 🔄 Syncs data in real-time with backend
+
+---
+
+## 🏗️ Project Structure
+
